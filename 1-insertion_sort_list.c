@@ -12,15 +12,13 @@ void insertion_sort_list(listint_t **list)
     if (list == NULL || *list == NULL || (*list)->next == NULL)
         return; /** Check for empty list or single-node list */
 
-    listint_t *current = (*list)->next;
-
     while (current != NULL)
     {
         listint_t *insertion_point = current->prev;
 
         while (insertion_point != NULL && insertion_point->n > current->n)
         {
-            insertion_point = swap_nodes(insertion_point, list);
+            insertion_point = swap_node(insertion_point, list);
             print_list(*list); /** Print the list after each swap */
             insertion_point = insertion_point->prev;
         }
@@ -36,7 +34,7 @@ void insertion_sort_list(listint_t **list)
  * Return: Pointer to the new position of the node after swapping.
  */
 
-listint_t *swap_nodes(listint_t *node, listint_t **list)
+listint_t *swap_node(listint_t *node, listint_t **list)
 {
     listint_t *prev_node = node->prev;
     listint_t *next_node = node->next;

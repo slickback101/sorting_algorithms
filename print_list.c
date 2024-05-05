@@ -8,9 +8,6 @@
 
 void print_list(const listint_t *list)
 {
-    int a;
-    a = 0;
-    
     if (list == NULL)
     {
         printf("Empty list\n");

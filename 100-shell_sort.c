@@ -14,16 +14,16 @@ void shell_sort(int *array, size_t size)
     if (array == NULL || size < 2)
         return;
 
-    unsigned int gap = 1;
+    gap = 1;
     while (gap < size / 3)
         gap = gap * 3 + 1;
 
     while (gap > 0)
     {
-        for (size_t a = gap; a < size; a++)
+        for (a = gap; a < size; a++)
         {
-            int temp = array[a];
-            size_t b = a;
+            temp = array[a];
+            b = a;
 
             while (b >= gap && array[b - gap] > temp)
             {

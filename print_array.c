@@ -18,7 +18,7 @@ void print_array(const int *array, size_t size)
         return;
     }
 
-    for (size_t a = 0; a < size; a++)
+    for (a = 0; a < size; a++)
     {
         if (a > 0)
             printf(", ");
